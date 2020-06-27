@@ -287,6 +287,8 @@ describe('App', () => {
         ],
       });
 
+    console.log(order.body.id);
+
     const response = await request(app).get(`/orders/${order.body.id}`);
 
     expect(response.body).toEqual(
